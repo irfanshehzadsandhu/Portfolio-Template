@@ -43,11 +43,11 @@ import dcc from './company/dcc.png';
 import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
 
-import komikult from './projects/komikult.png';
-import leaderboard from './projects/leaderboard.png';
-import math from './projects/math-magicians.png';
-import movie from './projects/movie-metro.png';
-import nyeusi from './projects/nyeusi.png';
+import snapdebt from './projects/snapdebt.png';
+import elephant from './projects/elephant.png';
+import honeycomb from './projects/honeycomb.png';
+import moonrock from './projects/moonrock.png';
+import pynwheel from './projects/pynwheel.png';
 import space from './projects/space-hub.png';
 
 export {
@@ -86,11 +86,11 @@ export {
   redux,
   tailwind,
   typescript,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
+  snapdebt,
+  elephant,
+  honeycomb,
+  moonrock,
+  pynwheel,
   space,
   coverhunt,
   dcc,

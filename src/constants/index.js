@@ -17,11 +17,11 @@ import {
   postgresql,
   rubyrails,
   graphql,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
+  snapdebt,
+  elephant,
+  honeycomb,
+  moonrock,
+  pynwheel,
   coverhunt,
   dcc,
   kelhel,
@@ -53,11 +53,11 @@ const services = [
     icon: backend,
   },
   {
-    title: 'UI/UX Design',
+    title: 'Estimations',
     icon: ux,
   },
   {
-    title: 'Software Prototyping',
+    title: 'Software Design and Architecture',
     icon: prototyping,
   },
 ];
@@ -155,115 +155,110 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'Snapdebt Recovery',
+    description: 'Debt recovery the right way',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'mysql',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'nodejs',
         color: 'pink-text-gradient',
       },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: snapdebt,
+    demo: 'https://snapdebtrecovery.com/',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'Elephant CPA',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'Streamlining The Relationship Between CPAs And Clients',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'nodejs',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'mysql',
         color: 'pink-text-gradient',
       },
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: elephant,
+    demo: 'https://getelephantcpa.com/',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'Honeycomb Credit',
+    description: 'Find your next investment on Honeycomb',
     tags: [
       {
         name: 'nextjs',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'nodejs',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'mysql',
         color: 'pink-text-gradient',
       },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: honeycomb,
+    demo: 'https://www.honeycombcredit.com/',
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'Moonrock',
+    description: `Simplifying the Landlord-Tenant Relationship`,
     tags: [
       {
-        name: 'nextjs',
+        name: 'react native',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'nodejs',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'mysql',
         color: 'pink-text-gradient',
       },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
+    image: moonrock,
+    demo: 'hhttps://www.moonrockpm.com/',
   },
   {
     id: 'project-5',
-    name: 'Nyeusi Fest Site',
+    name: 'Pynwheel',
     description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+      'Pynwheel is transforming multifamily property tours, one property at a time',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Ruby on Rails',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'postgresql',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'bootstrap',
         color: 'pink-text-gradient',
       },
     ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: pynwheel,
+    demo: 'https://pynwheeltouchscreens.com/',
   },
 ];
 
