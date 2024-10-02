@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { close, menu, logo, logotext } from "../assets";
+import { close, menu } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -16,26 +16,16 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="text-eerieBlack hover:text-taupe text-[40px] font-medium font-mova 
+                uppercase tracking-[3px]"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={logo} // your logo comes here
-            alt="logo"
-            className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
-          />
-
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          <img
-            src={logotext}
-            alt="logo"
-            className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
-          />
+          Irfan Shahzad
         </Link>
+
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
