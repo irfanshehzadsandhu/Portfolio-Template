@@ -22,10 +22,10 @@ import {
   honeycomb,
   moonrock,
   pynwheel,
-  coverhunt,
+  carbonteq,
   dcc,
-  kelhel,
-  microverse,
+  techverx,
+  intagleo,
 } from '../assets';
 
 export const navLinks = [
@@ -123,33 +123,26 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'Engineering Manage',
+    company_name: 'Carbonteq',
+    icon: carbonteq,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Aug 2020 - Current',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
+    title: 'Sr. Software Developer',
+    company_name: 'Intagleo',
+    icon: intagleo,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: 'Mar 2017 - July 2020',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
+    title: 'Ruby on Rails Developer',
+    company_name: 'Techverx',
+    icon: techverx,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
-  },
+    date: 'September 2013 - Feb 2017',
+  }
 ];
 
 const projects = [

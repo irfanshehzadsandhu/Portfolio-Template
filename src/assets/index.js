@@ -38,10 +38,10 @@ import graphql from './tech/graphql.png';
 import postgresql from './tech/postgresql.png';
 import rubyrails from './tech/rubyrails.png';
 
-import coverhunt from './company/coverhunt.png';
+import carbonteq from './company/carbonteq.png';
 import dcc from './company/dcc.png';
-import kelhel from './company/kelhel.png';
-import microverse from './company/microverse.png';
+import techverx from './company/techverx.png';
+import intagleo from './company/intagleo.png';
 
 import snapdebt from './projects/snapdebt.png';
 import elephant from './projects/elephant.png';
@@ -92,8 +92,8 @@ export {
   moonrock,
   pynwheel,
   space,
-  coverhunt,
+  carbonteq,
   dcc,
-  kelhel,
-  microverse,
+  techverx,
+  intagleo,
 };
