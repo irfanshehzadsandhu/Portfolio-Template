@@ -23,7 +23,6 @@ import {
   moonrock,
   pynwheel,
   carbonteq,
-  dcc,
   techverx,
   intagleo,
 } from '../assets';
@@ -53,7 +52,7 @@ const services = [
     icon: backend,
   },
   {
-    title: 'Estimations',
+    title: 'Mobile Developer',
     icon: ux,
   },
   {
@@ -229,7 +228,7 @@ const projects = [
       },
     ],
     image: moonrock,
-    demo: 'hhttps://www.moonrockpm.com/',
+    demo: 'https://www.moonrockpm.com/',
   },
   {
     id: 'project-5',

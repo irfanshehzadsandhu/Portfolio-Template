@@ -40,9 +40,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
-        I possess extensive experience in requirement analysis and software
-        design across multiple projects. My domain expertise encompasses
-        technologies such as Ruby on Rails, Node, React, as well as API
+        My domain expertise include technologies such as Ruby on Rails, Node, React, as well as API
         integration. I have a proven ability to build APIs tailored for mobile
         applications and I am proficient in deploying applications on platforms
         like GCP and AWS. My proficiency spans the entire software development
