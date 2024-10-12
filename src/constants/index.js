@@ -122,7 +122,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Engineering Manage',
+    title: 'Engineering Manager',
     company_name: 'Carbonteq',
     icon: carbonteq,
     iconBg: '#333333',
