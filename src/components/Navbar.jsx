@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="text-eerieBlack hover:text-taupe text-[40px] font-medium font-mova 
+          className="hidden md:block text-eerieBlack hover:text-taupe text-[40px] font-medium font-mova 
                 uppercase tracking-[3px]"
           onClick={() => {
             setActive("");
@@ -68,7 +68,7 @@ const Navbar = () => {
                     key={nav.id}
                     className={`${
                       active === nav.title ? "text-french" : "text-eerieBlack"
-                    } text-[88px] font-bold font-arenq 
+                    } text-[50px] font-bold font-arenq 
                       uppercase tracking-[1px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);
