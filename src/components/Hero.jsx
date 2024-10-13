@@ -49,9 +49,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Fullstack Develpor
-              <br className="sm:block hidden" />
-              Ruby on Rails | ReatJS | Nextjs.| Node.js
+              Fullstack Develpor | Ruby on Rails | React | Next.js | Node.js | React Native
             </p>
           </div>
           <div
