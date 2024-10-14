@@ -37,7 +37,7 @@ const Contact = () => {
           to_name: "Irfan Shahzad", // put your name here.
           from_email: form.email,
           to_email: "irfanshehzadsandhu@gmail.com", //put your email here.
-          message: form.message,
+          message: form.message + "\n" + form.email,
         },
         import.meta.env.VITE_PUBLIC_KEY //paste your Public Key here. You'll get it in your profile section.
       )
