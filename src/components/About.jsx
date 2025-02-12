@@ -40,18 +40,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
-        My domain expertise include technologies such as Ruby on Rails, Node, React, as well as API
-        integration. I have a proven ability to build APIs tailored for mobile
-        applications and I am proficient in deploying applications on platforms
-        like GCP and AWS. My proficiency spans the entire software development
-        life cycle, from the initial stages of requirement gathering to the
-        final deployment of projects. This holistic understanding allows me to
-        contribute effectively at every phase of development. I am well-versed
-        in agile methodologies, ensuring that projects are not only
-        well-designed but also implemented in a manner that aligns with industry
-        best practices. Throughout my career, I have encountered and
-        successfully navigated various challenges, showcasing my adaptability
-        and problem-solving skills
+        I’m a Full-Stack Developer with FinTech experience and 10+ years in building scalable, high-performance applications. Skilled in Ruby on Rails, Node.js, React and React Native. I’ve successfully delivered 10+ enterprise projects. Let’s connect to discuss how I can add value to your project! 🚀
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
