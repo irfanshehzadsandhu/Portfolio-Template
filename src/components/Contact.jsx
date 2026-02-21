@@ -1,62 +1,34 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { send, sendHover } from "../assets";
 
-const API_SEND_EMAIL = "/api/send-email";
+const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID;
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [openPopup, setOpenPopup] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setOpenPopup(true);
-
-    try {
-      const res = await fetch(API_SEND_EMAIL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          message: form.message,
-        }),
-      });
-
-      const data = await res.json().catch(() => ({}));
-
-      if (!res.ok) {
-        throw new Error(data.message || data.error || `HTTP ${res.status}`);
-      }
-
-      setLoading(false);
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowThankYou(true);
       setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      setLoading(false);
-      console.error(error);
-      alert(error.message || "Something went wrong. Please try again.");
     }
-  };
+  }, [state.succeeded]);
 
   return (
     <>
-      {openPopup && (
+      {showThankYou && (
         <div className="z-50 fixed inset-0 bg-black flex justify-center items-center bg-opacity-20 backdrop-blur-sm">
           <div className="relative p-4 w-full max-w-2xl max-h-full">
             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -67,8 +39,7 @@ const Contact = () => {
                 <button
                   type="button"
                   className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                  data-modal-hide="default-modal"
-                  onClick={() => setOpenPopup(false)}
+                  onClick={() => setShowThankYou(false)}
                 >
                   <svg
                     className="w-3 h-3"
@@ -130,6 +101,7 @@ const Contact = () => {
               border-none font-medium"
                 required
               />
+              <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-400 text-sm mt-1" />
             </label>
             <label className="flex flex-col">
               <span className="text-timberWolf font-medium mb-4">
@@ -147,6 +119,7 @@ const Contact = () => {
               border-none font-medium"
                 required
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 text-sm mt-1" />
             </label>
             <label className="flex flex-col">
               <span className="text-timberWolf font-medium mb-4">
@@ -164,29 +137,29 @@ const Contact = () => {
               border-none font-medium resize-none"
                 required
               />
+              <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-sm mt-1" />
             </label>
 
             <button
               type="submit"
+              disabled={state.submitting}
               className="live-demo flex justify-center sm:gap-4 
             gap-3 sm:text-[20px] text-[16px] text-timberWolf 
             font-bold font-beckman items-center py-5
             whitespace-nowrap sm:w-[130px] sm:h-[50px] 
             w-[100px] h-[45px] rounded-[10px] bg-night 
             hover:bg-battleGray hover:text-eerieBlack 
-            transition duration-[0.2s] ease-in-out"
+            transition duration-[0.2s] ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
               onMouseOver={() => {
-                document
-                  .querySelector(".contact-btn")
-                  .setAttribute("src", sendHover);
+                const btn = document.querySelector(".contact-btn");
+                if (btn) btn.setAttribute("src", sendHover);
               }}
               onMouseOut={() => {
-                document
-                  .querySelector(".contact-btn")
-                  .setAttribute("src", send);
+                const btn = document.querySelector(".contact-btn");
+                if (btn) btn.setAttribute("src", send);
               }}
             >
-              {loading ? "Sending" : "Send"}
+              {state.submitting ? "Sending" : "Send"}
               <img
                 src={send}
                 alt="send"
