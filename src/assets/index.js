@@ -50,6 +50,7 @@ import moonrock from './projects/moonrock.png';
 import pynwheel from './projects/pynwheel.png';
 import space from './projects/space-hub.png';
 import dementianc from './projects/dementianc.png';
+import cortex from './projects/cortex.png';
 
 export {
   bwmap,
@@ -98,4 +99,5 @@ export {
   techverx,
   intagleo,
   dementianc,
+  cortex,
 };
