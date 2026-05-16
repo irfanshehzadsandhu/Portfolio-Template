@@ -25,7 +25,8 @@ import {
   carbonteq,
   techverx,
   intagleo,
-  dementianc
+  dementianc,
+  cortex,
 } from '../assets';
 
 export const navLinks = [
@@ -274,6 +275,28 @@ const projects = [
     ],
     image: dementianc,
     demo: 'https://dementianc.org/',
+  },
+  {
+    id: 'project-7',
+    name: 'Cortex',
+    description:
+      'Personal RAG app — upload PDFs and ask questions about your documents.',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'rag',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: cortex,
+    demo: 'https://cortex-rho-one.vercel.app/documents',
   },
 ];
 
