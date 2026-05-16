@@ -109,6 +109,24 @@
   border-radius: 24px;
 }
 
+.projects-thumbnails {
+  scrollbar-width: thin;
+  scrollbar-color: #858585 transparent;
+}
+
+.projects-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-thumbnails::-webkit-scrollbar-thumb {
+  background: #858585;
+  border-radius: 999px;
+}
+
 .black-gradient {
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
