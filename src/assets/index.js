@@ -49,6 +49,7 @@ import honeycomb from './projects/honeycomb.png';
 import moonrock from './projects/moonrock.png';
 import pynwheel from './projects/pynwheel.png';
 import space from './projects/space-hub.png';
+import dementianc from './projects/dementianc.png';
 
 export {
   bwmap,
@@ -96,4 +97,5 @@ export {
   dcc,
   techverx,
   intagleo,
+  dementianc,
 };

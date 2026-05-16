@@ -49,7 +49,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Fullstack Developer | Ruby on Rails | React | Next.js | Node.js | React Native
+              Engineering Manager | Full Stack Developer | Next.js | React | TypeScript | Node.js | AWS | AI & RAG
             </p>
           </div>
           <div

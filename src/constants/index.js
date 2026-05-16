@@ -25,6 +25,7 @@ import {
   carbonteq,
   techverx,
   intagleo,
+  dementianc
 } from '../assets';
 
 export const navLinks = [
@@ -251,6 +252,28 @@ const projects = [
     ],
     image: pynwheel,
     demo: 'https://pynwheeltouchscreens.com/',
+  },
+  {
+    id: 'project-6',
+    name: 'Dementia Alliance',
+    description:
+      'Providing best care for dementia patients',
+    tags: [
+      {
+        name: 'Ruby on Rails',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'postgresql',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'bootstrap',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: dementianc,
+    demo: 'https://dementianc.org/',
   },
 ];
 

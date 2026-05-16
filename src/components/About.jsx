@@ -40,7 +40,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
-        I’m a Full-Stack Developer with FinTech experience and 10+ years in building scalable, high-performance applications. Skilled in Ruby on Rails, Node.js, React and React Native. I’ve successfully delivered 10+ enterprise projects. Let’s connect to discuss how I can add value to your project! 🚀
+        I’m an Engineering Manager and Full Stack Developer with 10+ years of experience leading teams and building scalable SaaS, fintech, and enterprise web products. My expertise includes Next.js, React, TypeScript, Node.js, MERN, microservices, API architecture, AWS, Docker, and CI/CD, plus practical AI integration using RAG pipelines, vector retrieval, and Hugging Face-based LLM and embedding workflows. Let’s connect to discuss how I can add value to your project! 🚀
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
