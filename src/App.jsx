@@ -5,6 +5,7 @@ import {
   Experience,
   Hero,
   Navbar,
+  Stats,
   Tech,
   Projects,
 } from './components';
@@ -20,6 +21,7 @@ const App = () => {
 
         <div className="bg-about bg-cover bg-center bg-no-repeat">
           <About />
+          <Stats />
         </div>
 
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">

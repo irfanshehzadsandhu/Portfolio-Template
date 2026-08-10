@@ -49,7 +49,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Engineering Manager | Full Stack Developer | Next.js | React | TypeScript | Node.js | AWS | AI & RAG
+              Engineering Manager building high-performing teams and
+              production-ready SaaS, fintech, and AI products.
             </p>
           </div>
           <div
