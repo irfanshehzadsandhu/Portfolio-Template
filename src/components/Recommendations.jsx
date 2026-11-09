@@ -15,8 +15,7 @@ const Recommendations = () => {
         <p className={styles.sectionEyebrow}>Social proof</p>
         <h2 className={`${styles.sectionHead} mt-3`}>Recommendations</h2>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          Selected LinkedIn recommendations from managers, peers, and people
-          I&apos;ve led.
+          Selected LinkedIn recommendations.
         </p>
       </motion.div>
 

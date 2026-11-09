@@ -18,6 +18,9 @@ import {
 import lazaros from '../assets/recommenders/lazaros.jpeg';
 import michael from '../assets/recommenders/michael.jpeg';
 import massood from '../assets/recommenders/massood.jpeg';
+import hassib from '../assets/recommenders/hassib.jpeg';
+import deshon from '../assets/recommenders/deshon.jpeg';
+import joe from '../assets/recommenders/joe.jpeg';
 
 export const socials = {
   linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/',
@@ -275,13 +278,33 @@ I believe in him and I know that he has a great passion for what he is doing.`,
   {
     id: 'rec-4',
     quote:
-      'Rare combination of full-stack strength and management maturity. Irfan improved our review culture, cut noise from the roadmap, and made cross-team delivery feel intentional instead of heroic.',
-    name: 'Replace With Recommender',
-    title: 'Engineering Peer · Company',
-    relationship: 'Peer',
-    linkedin: 'https://www.linkedin.com/in/irfanshahzad/',
-    initials: 'RR',
+      `It was a pleasure working with Irfan and the Carbonteq team.  Irfan worked tirelessly to develop an MVP on a tight timeline, interpreting business needs and design, and implementing modern web functionality.  When challenges arose, Irfan was able to quickly understand issues and propose recommend solutions.`,
+    name: 'Hassib Amiryar',
+    title: 'Agile Delivery and Project Management @ MITRE',
+    relationship: 'Managed Irfan',
+    linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
+    image: hassib,
   },
+  {
+    id: 'rec-5',
+    quote:
+      `Irfan has worked on the development of my app MoonRock PM. He was very helpful with developing and coding everything that I vision how the app should look and function. After testing for bugs, he was quick to make the fixes and changes that we recommended. Irfan is such a great and easy person to work with. Very understanding and knows how to make your vision come true!!`,
+    name: `De'Shon Swafford`,
+    title: 'Simplifying rentals for people doing it solo | Co-founder @ Moonrock',
+    relationship: 'Worked with Irfan',
+    linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
+    image: deshon,
+  },
+  {
+    id: 'rec-6',
+    quote:
+      `I had the pleasure of working with Irfan over the last two years. He joined the team during a critical systems integration project, bringing deep experience with the complex requirements around funds transfer. That expertise was a real asset as we navigated the transition — and what set him apart was taking the time to understand not just the technical details, but also the underlying business processes and the drivers behind our decisions, which made collaboration much smoother. Irfan is genuinely easy to work with. He's receptive to feedback and cares about the people around him, which comes through in how he engages with his team.`,
+    name: 'Joe Lipple',
+    title: 'Chief Product Officer at Honeycomb Credit',
+    relationship: 'Worked with Irfan',
+    linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
+    image: joe,
+  }
 ];
 
 /*
