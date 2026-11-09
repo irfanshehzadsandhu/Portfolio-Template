@@ -316,14 +316,14 @@ const certificates = [
     id: 'cert-1',
     title: 'Frontend Developer (React)',
     issuer: 'HackerRank',
-    issued: 'Certificate',
+    issued: 'Certificate of Accomplishment',
     image: frontend,
   },
   {
     id: 'cert-2',
-    title: 'Software Engineering',
-    issuer: 'TestGrollia',
-    issued: 'Certificate',
+    title: 'Software Engineer',
+    issuer: 'TestGorilla',
+    issued: 'Verified result · 74th percentile',
     image: testgrollia,
   },
 ];
