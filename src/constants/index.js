@@ -16,6 +16,8 @@ import {
   certReact,
 } from '../assets';
 import lazaros from '../assets/recommenders/lazaros.jpeg';
+import michael from '../assets/recommenders/michael.jpeg';
+import massood from '../assets/recommenders/massood.jpeg';
 
 export const socials = {
   linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/',
@@ -253,22 +255,22 @@ I believe in him and I know that he has a great passion for what he is doing.`,
   {
     id: 'rec-2',
     quote:
-      'Working with Irfan as an EM was one of the clearest growth periods of my career. He unblocks hard problems, protects focus, and still stays close enough to the code to earn trust from senior ICs.',
-    name: 'Replace With Recommender',
-    title: 'Senior Software Engineer · Company',
-    relationship: 'Reported to Irfan',
-    linkedin: 'https://www.linkedin.com/in/irfanshahzad/',
-    initials: 'RR',
+      `My company worked with Irfan to develop the first version of our automated productivity software to great success. Together we tackled a new idea, and built a functional prototype in just two weeks. From there we rounded out features and incorporated user feedback (can you tell this is from a Product Managers perspective?) and successfully built out or first version in less than 2 months. Irfan was very responsive to requested changes and willing to go above and beyond to make sure we got the best results. I hope to work together again on future projects.`,
+    name: 'Michael Cariglia',
+    title: 'Application Engineer Manager',
+    relationship: 'Managed Irfan',
+    linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
+    image: michael,
   },
   {
     id: 'rec-3',
     quote:
-      'Irfan translates business constraints into technical plans that actually ship. On our fintech work he owned outcomes end-to-end — architecture, people, and the operational details that keep production calm.',
-    name: 'Replace With Recommender',
-    title: 'Product Partner · Company',
+      `Irfan and the team did a amazing job building our product. Irfan is highly intelligent when it comes to software development and was asking all the right question during the production phase. If there was ever a problem, Irfan was the first to try and find a solution. I highly recommend using both Irfan and Carbonteq for all development needs.`,
+    name: 'Christopher Massood, CPA',
+    title: `Masood & Company, PA CPA's`,
     relationship: 'Worked with Irfan',
-    linkedin: 'https://www.linkedin.com/in/irfanshahzad/',
-    initials: 'RR',
+    linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
+    image: massood,
   },
   {
     id: 'rec-4',
