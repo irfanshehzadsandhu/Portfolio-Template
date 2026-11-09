@@ -67,8 +67,17 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Career</p>
-        <h2 className={`${styles.sectionHead} mt-3`}>Experience</h2>
+        <div className="flex items-center gap-3 mb-4 sm:pl-16 pl-[2rem]">
+          <span className="block h-px w-8 bg-accent" />
+          <p className={styles.sectionEyebrow}>Experience</p>
+        </div>
+        <h2 className={`${styles.sectionHead} sm:pl-16 pl-[2rem]`}>
+          Where I have worked
+        </h2>
+        <p className={`${styles.body} mt-4 max-w-2xl sm:pl-16 pl-[2rem]`}>
+          Started as a Rails developer, grew into senior IC work, and now manage
+          engineering teams.
+        </p>
       </motion.div>
 
       <div className="mt-16 flex flex-col">

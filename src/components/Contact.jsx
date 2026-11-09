@@ -34,7 +34,7 @@ const Contact = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="font-display text-ink text-[1.5rem] font-semibold">
-                  Thank you
+                  Thank You
                 </h3>
                 <p className="mt-2 text-muted text-[0.95rem] leading-relaxed">
                   I&apos;ll get back to you as soon as possible.
@@ -59,9 +59,9 @@ const Contact = () => {
           className="flex-[0.75] bg-night rounded-2xl p-7 sm:p-9"
         >
           <p className="font-sans text-accentMuted text-[0.8rem] uppercase tracking-[0.18em] font-semibold">
-            Get in touch
+            Contact
           </p>
-          <h3 className={`${styles.sectionHeadInverse} mt-3`}>Contact</h3>
+          <h3 className={`${styles.sectionHeadInverse} mt-3`}>Say hello</h3>
 
           <form
             ref={formRef}
@@ -70,7 +70,7 @@ const Contact = () => {
           >
             <label className="flex flex-col gap-2">
               <span className="text-cream/80 text-[0.9rem] font-medium">
-                Your name
+                Your Name
               </span>
               <input
                 type="text"
@@ -93,7 +93,7 @@ const Contact = () => {
 
             <label className="flex flex-col gap-2">
               <span className="text-cream/80 text-[0.9rem] font-medium">
-                Your email
+                Your Email
               </span>
               <input
                 type="email"
@@ -154,8 +154,8 @@ const Contact = () => {
           className="flex-1 flex flex-col justify-end gap-6 pb-2"
         >
           <p className={`${styles.body} max-w-md`}>
-            Open to engineering leadership roles, advisory conversations, and
-            product collaborations in SaaS, fintech, and AI.
+            If you are hiring for an engineering leadership role, or just want
+            to talk about a product idea, feel free to reach out.
           </p>
           <div className="flex flex-wrap gap-4">
             <a

@@ -8,8 +8,17 @@ const Tech = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Capabilities</p>
-        <h2 className={`${styles.sectionHeadInverse} mt-3`}>Stack & craft</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="block h-px w-8 bg-accentMuted" />
+          <p className="font-sans text-[0.8rem] sm:text-[0.85rem] uppercase tracking-[0.18em] text-accentMuted font-semibold">
+            Toolkit
+          </p>
+        </div>
+        <h2 className={styles.sectionHeadInverse}>Tools I use</h2>
+        <p className="mt-4 max-w-2xl font-sans text-cream/65 text-[1rem] sm:text-[1.1rem] leading-[1.7]">
+          Not an exhaustive list. Just the stuff that shows up most in my day to
+          day.
+        </p>
       </motion.div>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">

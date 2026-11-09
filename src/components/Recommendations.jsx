@@ -12,10 +12,13 @@ const Recommendations = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Social proof</p>
-        <h2 className={`${styles.sectionHead} mt-3`}>Recommendations</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="block h-px w-8 bg-accent" />
+          <p className={styles.sectionEyebrow}>People</p>
+        </div>
+        <h2 className={styles.sectionHead}>What others have said</h2>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          Selected LinkedIn recommendations.
+          A few notes from people I have worked with on LinkedIn.
         </p>
       </motion.div>
 

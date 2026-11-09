@@ -110,8 +110,8 @@ const Hero = () => {
             animate="show"
             className="mt-7 font-sans text-muted text-[1.05rem] sm:text-[1.2rem] leading-relaxed max-w-[28rem]"
           >
-            I lead teams that ship SaaS, fintech, and AI products — with clean
-            architecture, calm delivery, and quality that holds in production.
+            I manage engineering teams and still build when needed. Most of my
+            work sits in SaaS, fintech, and a bit of AI.
           </motion.p>
 
           <motion.div
@@ -127,7 +127,7 @@ const Hero = () => {
                 bg-accent text-cream font-sans font-semibold text-[0.95rem]
                 hover:bg-accentSoft transition-colors"
             >
-              View selected work
+              See my work
             </a>
             <a
               href={socials.resume}

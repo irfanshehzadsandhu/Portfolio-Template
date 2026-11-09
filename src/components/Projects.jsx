@@ -84,7 +84,7 @@ const FeaturedProject = ({ project, index }) => (
         className="mt-5 inline-flex items-center gap-2 font-sans font-semibold text-[0.92rem]
           text-accent hover:text-accentSoft transition-colors"
       >
-        Explore live product
+        View live site
         <span aria-hidden="true">→</span>
       </a>
     </div>
@@ -104,12 +104,12 @@ const Projects = () => {
       <motion.div variants={textVariant()} className="max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <span className="block h-px w-8 bg-accent" />
-          <p className={styles.sectionEyebrow}>Case studies</p>
+          <p className={styles.sectionEyebrow}>Work</p>
         </div>
-        <h2 className={styles.sectionHead}>Selected work</h2>
+        <h2 className={styles.sectionHead}>Things I have worked on</h2>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          Products I helped design, build, and deliver — from fintech platforms
-          to AI tooling.
+          Some of the products I have helped build. Mostly fintech and SaaS,
+          with one personal AI project mixed in.
         </p>
       </motion.div>
 

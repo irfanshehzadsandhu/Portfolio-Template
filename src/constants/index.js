@@ -38,53 +38,53 @@ export const navLinks = [
 
 const capabilities = [
   {
-    title: 'Engineering leadership',
+    title: 'Leading teams',
     detail:
-      'Hiring, mentoring, and operating teams that ship reliably under real product pressure.',
+      'I hire people carefully, mentor them in public, and keep the team moving when priorities shift.',
   },
   {
-    title: 'Full-stack delivery',
+    title: 'Building products',
     detail:
-      'Hands-on across Next.js, React, TypeScript, Node.js, Rails, and production data layers.',
+      'I still write and review code. Mostly React, Next.js, TypeScript, Node, and Rails.',
   },
   {
-    title: 'AI / RAG systems',
+    title: 'Working with AI',
     detail:
-      'Practical LLM workflows — retrieval, embeddings, citation-grounded answers, Hugging Face pipelines.',
+      'I have shipped RAG features with embeddings and citations. Useful ones, not demos for the sake of demos.',
   },
 ];
 
 const stats = [
   {
     value: '10+',
-    label: 'Years experience',
-    detail: 'SaaS, fintech & enterprise products',
+    label: 'Years of experience',
+    detail: 'Mostly SaaS and fintech products',
   },
   {
     value: '40%',
     label: 'Fewer production bugs',
-    detail: 'Stronger code review & quality practices',
+    detail: 'After we tightened reviews and ownership',
   },
   {
     value: '60%',
     label: 'Less manual follow-up',
-    detail: 'Automated debt recovery with RingCentral',
+    detail: 'From automating debt recovery outreach',
   },
   {
     value: '3→1',
     label: 'Days to onboard',
-    detail: 'Custom Zoho Sign integration',
+    detail: 'After adding Zoho Sign into the flow',
   },
 ];
 
 const techGroups = [
   {
-    title: 'Leadership & delivery',
+    title: 'How I work',
     items: [
-      'Team hiring & mentoring',
-      'Agile delivery',
+      'Hiring and mentoring',
+      'Planning and delivery',
       'Architecture reviews',
-      'CI/CD & quality gates',
+      'CI/CD and quality',
     ],
   },
   {
@@ -92,12 +92,12 @@ const techGroups = [
     items: ['React', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS'],
   },
   {
-    title: 'Backend & data',
+    title: 'Backend',
     items: ['Node.js', 'Ruby on Rails', 'GraphQL', 'PostgreSQL', 'MySQL'],
   },
   {
-    title: 'Cloud & AI',
-    items: ['AWS', 'Docker', 'RAG pipelines', 'Vector retrieval', 'Hugging Face'],
+    title: 'Cloud and AI',
+    items: ['AWS', 'Docker', 'RAG pipelines', 'Vector search', 'Hugging Face'],
   },
 ];
 
@@ -109,26 +109,26 @@ const experiences = [
     iconBg: '#1A1C1B',
     date: 'Aug 2020 — Present',
     points: [
-      'Cut project delivery time by 20% through process optimization and tighter team collaboration.',
-      'Lowered production bug rates by 40% with stronger code review standards.',
-      'Improved page load times by 25% and system response times by 40% via performance work and query optimization.',
-      'Automated debt recovery with RingCentral APIs, reducing manual follow-up time by 60%.',
-      'Designed a Zoho Sign integration that cut client onboarding from three days to one.',
-      'Helped clients reduce administrative workload by 35% while aligning tech strategy to business goals.',
+      'Got projects out about 20% faster by cleaning up process and reducing handoff friction.',
+      'Brought production bugs down by roughly 40% once reviews and ownership were clearer.',
+      'Made pages load about 25% faster and improved response times by around 40%.',
+      'Wired RingCentral into debt recovery so agents spent 60% less time on manual follow-up.',
+      'Added Zoho Sign and cut client onboarding from three days to one.',
+      'Worked with clients to trim admin work by about 35%, with engineering choices tied to what the business needed.',
     ],
   },
   {
-    title: 'Sr. Software Developer',
+    title: 'Senior Software Developer',
     company_name: 'Intagleo',
     icon: intagleo,
     iconBg: '#1A1C1B',
     date: 'Mar 2017 — Jul 2020',
     points: [
-      'Led a team of four developers while reporting to the Head of Engineering.',
-      'Raised team productivity by 30% after introducing agile delivery practices.',
-      'Decreased feature delivery times by 20% and drove architecture and quality improvements.',
-      'Cut new real-estate API integration time from two weeks to three days.',
-      'Owned requirements gathering, estimations, and code reviews across ongoing products.',
+      'Led a team of four and reported to the Head of Engineering.',
+      'Helped the team move about 30% faster after we settled into a workable agile rhythm.',
+      'Cut feature delivery time by around 20% by fixing architecture and review habits.',
+      'Got new real-estate API integrations done in three days instead of two weeks.',
+      'Took ownership of scoping, estimates, and code reviews on live products.',
     ],
   },
   {
@@ -138,8 +138,8 @@ const experiences = [
     iconBg: '#1A1C1B',
     date: 'Sep 2013 — Feb 2017',
     points: [
-      'Partnered directly with clients to scope needs, build proofs of concept, and ship new applications.',
-      'Delivered scheduling and relocation workflow products on Ruby on Rails and PostgreSQL.',
+      'Sat with clients, figured out what they needed, built prototypes, and shipped.',
+      'Built scheduling and relocation products with Ruby on Rails and PostgreSQL.',
     ],
   },
 ];
@@ -148,11 +148,11 @@ const projects = [
   {
     id: 'project-1',
     name: 'Snapdebt Recovery',
-    role: 'Engineering lead — architecture & delivery',
+    role: 'Led architecture and delivery',
     problem:
-      'Collections teams were drowning in manual outreach across scattered tools, slowing recovery and burning agent time.',
+      'The collections team was stuck doing outreach by hand across too many tools.',
     outcome:
-      'Shipped a loan recovery platform with automated follow-ups that cut manual work by 60%, using clean architecture on Node.js, React, and MySQL.',
+      'We built an automated recovery product on Node, React, and MySQL. Manual follow-up dropped by about 60%.',
     stack: ['React', 'Node.js', 'MySQL', 'RingCentral'],
     image: snapdebt,
     demo: 'https://snapdebtrecovery.com/',
@@ -160,11 +160,11 @@ const projects = [
   {
     id: 'project-2',
     name: 'Elephant CPA',
-    role: 'Full-stack delivery & product engineering',
+    role: 'Full-stack engineering',
     problem:
-      'CPA firms needed a cleaner way to collaborate with clients without email chaos and repetitive admin work.',
+      'CPA firms were managing client work over email, and it created a lot of avoidable admin.',
     outcome:
-      'Built a CPA–client collaboration product that reduced administrative overhead for accounting workflows on Node.js and React.',
+      'Built a React and Node product so firms and clients could collaborate in one place.',
     stack: ['React', 'Node.js', 'MySQL'],
     image: elephant,
     demo: 'https://getelephantcpa.com/',
@@ -174,9 +174,9 @@ const projects = [
     name: 'Honeycomb Credit',
     role: 'Platform engineering',
     problem:
-      'Small businesses and investors needed a trustworthy crowdfunding experience with clear domain boundaries.',
+      'Small businesses and investors needed a crowdfunding product that felt trustworthy and well structured.',
     outcome:
-      'Delivered a crowdfunding web app with domain-driven design on Next.js, Node.js, and MySQL.',
+      'Shipped the platform on Next.js, Node, and MySQL, with clearer domain boundaries in the codebase.',
     stack: ['Next.js', 'Node.js', 'MySQL', 'DDD'],
     image: honeycomb,
     demo: 'https://www.honeycombcredit.com/',
@@ -184,11 +184,11 @@ const projects = [
   {
     id: 'project-4',
     name: 'Moonrock',
-    role: 'Mobile & API architecture',
+    role: 'Mobile and API work',
     problem:
-      'Landlords and tenants lacked a simple shared surface for day-to-day property relationships.',
+      'Landlords and tenants needed a simpler way to handle day-to-day rental stuff.',
     outcome:
-      'Shipped a React Native app backed by Node.js and MySQL with clean architecture for property management workflows.',
+      'Built the React Native app and Node/MySQL backend behind it.',
     stack: ['React Native', 'Node.js', 'MySQL'],
     image: moonrock,
     demo: 'https://www.moonrockpm.com/',
@@ -196,11 +196,11 @@ const projects = [
   {
     id: 'project-5',
     name: 'Pynwheel',
-    role: 'Rails product engineering',
+    role: 'Rails engineering',
     problem:
-      'Multifamily leasing teams needed modern on-site tour experiences beyond static brochures.',
+      'Leasing teams were still using static brochures for on-site apartment tours.',
     outcome:
-      'Built a multifamily property tour platform on Ruby on Rails and PostgreSQL to modernize leasing touchpoints.',
+      'Built a tour platform with Ruby on Rails and PostgreSQL for multifamily properties.',
     stack: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap'],
     image: pynwheel,
     demo: 'https://pynwheeltouchscreens.com/',
@@ -208,11 +208,11 @@ const projects = [
   {
     id: 'project-6',
     name: 'Dementia Alliance',
-    role: 'Full-stack engineer',
+    role: 'Full-stack engineering',
     problem:
-      'Dementia support organizations needed coordinated care workflows across scattered stakeholders.',
+      'Support organizations needed a better way to coordinate care across different people and teams.',
     outcome:
-      'Delivered a care coordination web app on Ruby on Rails and PostgreSQL for support organizations.',
+      'Built the care coordination app on Ruby on Rails and PostgreSQL.',
     stack: ['Ruby on Rails', 'PostgreSQL'],
     image: dementianc,
     demo: 'https://dementianc.org/',
@@ -220,11 +220,11 @@ const projects = [
   {
     id: 'project-7',
     name: 'Cortex',
-    role: 'Personal RAG product',
+    role: 'Side project',
     problem:
-      'Document Q&A without grounded citations creates hallucination risk and weak trust.',
+      'I wanted document Q&A that could point back to sources, not just invent answers.',
     outcome:
-      'Built a personal RAG app — upload PDFs, retrieve with embeddings, and get citation-grounded answers via Hugging Face workflows.',
+      'Built a small RAG app: upload PDFs, retrieve chunks with embeddings, and answer with citations using Hugging Face.',
     stack: ['Next.js', 'TypeScript', 'RAG', 'Hugging Face'],
     image: cortex,
     demo: 'https://cortex-rho-one.vercel.app/documents',
@@ -255,7 +255,7 @@ I believe in him and I know that he has a great passion for what he is doing.`,
   {
     id: 'rec-2',
     quote:
-      `My company worked with Irfan to develop the first version of our automated productivity software to great success. Together we tackled a new idea, and built a functional prototype in just two weeks. From there we rounded out features and incorporated user feedback (can you tell this is from a Product Managers perspective?) and successfully built out or first version in less than 2 months. Irfan was very responsive to requested changes and willing to go above and beyond to make sure we got the best results. I hope to work together again on future projects.`,
+      `My company worked with Irfan to develop the first version of our automated productivity software to great success. Together we tackled a new idea, and built a functional prototype in just two weeks. From there we rounded out features and incorporated user feedback (can you tell this is from a Product Manager's perspective?) and successfully built out our first version in less than 2 months. Irfan was very responsive to requested changes and willing to go above and beyond to make sure we got the best results. I hope to work together again on future projects.`,
     name: 'Michael Cariglia',
     title: 'Application Engineer Manager',
     relationship: 'Managed Irfan',
@@ -265,7 +265,7 @@ I believe in him and I know that he has a great passion for what he is doing.`,
   {
     id: 'rec-3',
     quote:
-      `Irfan and the team did a amazing job building our product. Irfan is highly intelligent when it comes to software development and was asking all the right question during the production phase. If there was ever a problem, Irfan was the first to try and find a solution. I highly recommend using both Irfan and Carbonteq for all development needs.`,
+      `Irfan and the team did an amazing job building our product. Irfan is highly intelligent when it comes to software development and was asking all the right questions during the production phase. If there was ever a problem, Irfan was the first to try and find a solution. I highly recommend using both Irfan and Carbonteq for all development needs.`,
     name: 'Christopher Massood, CPA',
     title: `Masood & Company, PA CPA's`,
     relationship: 'Worked with Irfan',
@@ -275,7 +275,7 @@ I believe in him and I know that he has a great passion for what he is doing.`,
   {
     id: 'rec-4',
     quote:
-      `It was a pleasure working with Irfan and the Carbonteq team.  Irfan worked tirelessly to develop an MVP on a tight timeline, interpreting business needs and design, and implementing modern web functionality.  When challenges arose, Irfan was able to quickly understand issues and propose recommend solutions.`,
+      `It was a pleasure working with Irfan and the Carbonteq team. Irfan worked tirelessly to develop an MVP on a tight timeline, interpreting business needs and design, and implementing modern web functionality. When challenges arose, Irfan was able to quickly understand issues and propose recommended solutions.`,
     name: 'Hassib Amiryar',
     title: 'Agile Delivery and Project Management @ MITRE',
     relationship: 'Managed Irfan',
@@ -287,7 +287,7 @@ I believe in him and I know that he has a great passion for what he is doing.`,
     quote:
       `Irfan has worked on the development of my app MoonRock PM. He was very helpful with developing and coding everything that I vision how the app should look and function. After testing for bugs, he was quick to make the fixes and changes that we recommended. Irfan is such a great and easy person to work with. Very understanding and knows how to make your vision come true!!`,
     name: `De'Shon Swafford`,
-    title: 'Simplifying rentals for people doing it solo | Co-founder @ Moonrock',
+    title: 'Co-founder @ Moonrock',
     relationship: 'Worked with Irfan',
     linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/details/recommendations/?detailScreenTabIndex=0',
     image: deshon,
@@ -323,7 +323,7 @@ const certificates = [
     id: 'cert-2',
     title: 'Software Engineer',
     issuer: 'TestGorilla',
-    issued: 'Verified result · 74th percentile',
+    issued: 'Verified Result · 74th Percentile',
     image: testgrollia,
   },
 ];

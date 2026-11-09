@@ -30,8 +30,8 @@ const Certificates = () => {
         </div>
         <h2 className={styles.sectionHead}>Certificates</h2>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          Verified assessments in frontend and software engineering — click any
-          certificate to view it full size.
+          A couple of certificates I keep around. Click one if you want a closer
+          look.
         </p>
       </motion.div>
 
@@ -62,7 +62,7 @@ const Certificates = () => {
                 className="mt-5 inline-flex items-center gap-2 font-sans font-semibold text-[0.92rem]
                   text-accent hover:text-accentSoft transition-colors"
               >
-                View certificate
+                View full size
                 <span aria-hidden="true">→</span>
               </button>
             </div>

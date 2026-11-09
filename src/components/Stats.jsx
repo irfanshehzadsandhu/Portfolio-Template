@@ -8,8 +8,11 @@ const Stats = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Impact by the numbers</p>
-        <h2 className={`${styles.sectionHead} mt-3`}>Results</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="block h-px w-8 bg-accent" />
+          <p className={styles.sectionEyebrow}>Numbers</p>
+        </div>
+        <h2 className={styles.sectionHead}>A few results</h2>
       </motion.div>
 
       <motion.div

@@ -8,21 +8,23 @@ const About = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Introduction</p>
-        <h2 className={`${styles.sectionHead} mt-3`}>Overview</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="block h-px w-8 bg-accent" />
+          <p className={styles.sectionEyebrow}>About</p>
+        </div>
+        <h2 className={styles.sectionHead}>A bit about me</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 0.55)}
         className={`${styles.body} mt-6 max-w-3xl`}
       >
-        Engineering Manager and full-stack developer with 10+ years leading
-        teams and shipping scalable SaaS, fintech, and enterprise products. I
-        combine hands-on strength in Next.js, React, TypeScript, Node.js,
-        microservices, AWS, and CI/CD with practical AI delivery — RAG
-        pipelines, vector retrieval, and Hugging Face LLM workflows. I hire,
-        mentor, and operationalize engineering so delivery stays fast and
-        quality stays high.
+        I have spent a little over ten years building software, and the last
+        several of those leading teams. These days I am an Engineering Manager
+        at Carbonteq. I care a lot about getting the right people in the room,
+        keeping delivery sane, and not losing touch with the code. Most of the
+        products I have worked on are in SaaS and fintech. Lately I have also
+        been building with LLMs where they actually help.
       </motion.p>
 
       <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 border-t border-line pt-10">
