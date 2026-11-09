@@ -1,3 +1,5 @@
+import irfan from './personal/irfan.png';
+
 import close from './icons/close.png';
 import menu from './icons/menu.png';
 
@@ -20,6 +22,7 @@ import certSql from './certs/sql.svg';
 import certReact from './certs/react.svg';
 
 export {
+  irfan,
   close,
   menu,
   snapdebt,

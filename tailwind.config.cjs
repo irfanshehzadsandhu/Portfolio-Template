@@ -31,8 +31,10 @@ module.exports = {
       backgroundImage: {
         grain:
           'radial-gradient(ellipse at 20% 0%, rgba(15, 92, 92, 0.08), transparent 50%), radial-gradient(ellipse at 90% 20%, rgba(26, 28, 27, 0.06), transparent 45%)',
-        heroWash:
-          'linear-gradient(180deg, rgba(20, 24, 22, 0.55) 0%, rgba(20, 24, 22, 0.72) 45%, rgba(20, 24, 22, 0.92) 100%)',
+        hero:
+          'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
+        'hero-mobile':
+          'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
       },
     },
   },
