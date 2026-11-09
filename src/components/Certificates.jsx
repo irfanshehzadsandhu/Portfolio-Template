@@ -23,72 +23,70 @@ const Certificates = () => {
 
   return (
     <div>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionEyebrow}>Credentials</p>
-        <h2 className={`${styles.sectionHead} mt-3`}>Certificates</h2>
+      <motion.div variants={textVariant()} className="max-w-3xl">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="block h-px w-8 bg-accent" />
+          <p className={styles.sectionEyebrow}>Credentials</p>
+        </div>
+        <h2 className={styles.sectionHead}>Certificates</h2>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          Verified assessments in frontend and software engineering — click to
-          view full size.
+          Verified assessments in frontend and software engineering — click any
+          certificate to view it full size.
         </p>
       </motion.div>
 
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      <div className="mt-10 sm:mt-12 space-y-8 sm:space-y-10">
         {certificates.map((cert, index) => (
-          <motion.figure
+          <motion.article
             key={cert.id}
-            variants={fadeIn('up', 'tween', index * 0.1, 0.45)}
-            className="m-0"
+            variants={fadeIn('up', 'tween', index * 0.08, 0.45)}
+            className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-start border-t border-line pt-8 sm:pt-10"
           >
-            <button
-              type="button"
-              onClick={() => setLightbox(cert)}
-              className="group relative w-full text-left focus:outline-none
-                focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2
-                focus-visible:ring-offset-paper rounded-2xl"
-            >
-              <div
-                className="relative flex items-center justify-center overflow-hidden
-                  rounded-2xl bg-night px-5 py-8 sm:px-8 sm:py-10
-                  min-h-[260px] sm:min-h-[300px] shadow-soft
-                  transition-shadow duration-300 group-hover:shadow-lift"
-              >
-                <span
-                  className="absolute top-4 left-4 z-10 font-sans text-[0.7rem]
-                    uppercase tracking-[0.16em] font-semibold text-cream/90
-                    bg-accent/90 px-3 py-1.5 rounded-full"
-                >
-                  {cert.issuer}
-                </span>
-
-                <img
-                  src={cert.image}
-                  alt={`${cert.title} certificate`}
-                  className="relative z-[1] w-full max-h-[220px] sm:max-h-[240px]
-                    object-contain drop-shadow-lg
-                    transition-transform duration-300 ease-out
-                    group-hover:scale-[1.02]"
-                />
-
-                <span
-                  className="absolute bottom-4 right-4 z-10 font-sans text-[0.75rem]
-                    font-semibold text-cream/0 group-hover:text-cream/80
-                    transition-colors duration-300"
-                >
-                  View →
-                </span>
-              </div>
-            </button>
-
-            <figcaption className="mt-5 px-1">
-              <p className="font-display text-ink text-[1.35rem] sm:text-[1.5rem] font-semibold tracking-tight">
-                {cert.title}
-              </p>
-              <p className="mt-1.5 text-muted text-[0.9rem]">
+            <div className="lg:col-span-4 lg:pt-1">
+              <p className="font-sans text-[0.7rem] uppercase tracking-[0.16em] text-soft">
+                {String(index + 1).padStart(2, '0')}
+                <span className="mx-2 text-line">·</span>
                 {cert.issuer}
-                {cert.issued ? ` · ${cert.issued}` : ''}
               </p>
-            </figcaption>
-          </motion.figure>
+              <h3 className="mt-2.5 font-display font-semibold text-ink text-[1.65rem] sm:text-[1.9rem] leading-tight tracking-tight">
+                {cert.title}
+              </h3>
+              {cert.issued && (
+                <p className="mt-3 font-sans text-muted text-[0.92rem] leading-relaxed">
+                  {cert.issued}
+                </p>
+              )}
+              <button
+                type="button"
+                onClick={() => setLightbox(cert)}
+                className="mt-5 inline-flex items-center gap-2 font-sans font-semibold text-[0.92rem]
+                  text-accent hover:text-accentSoft transition-colors"
+              >
+                View certificate
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <div className="lg:col-span-8">
+              <button
+                type="button"
+                onClick={() => setLightbox(cert)}
+                className="group w-full text-left rounded-xl overflow-hidden border border-line
+                  bg-cream shadow-soft hover:shadow-lift transition-shadow duration-300
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-accent
+                  focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+              >
+                <div className="bg-[#f7f5f0] px-3 py-3 sm:px-5 sm:py-5 flex items-center justify-center">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} certificate`}
+                    className="w-full h-auto max-h-[320px] sm:max-h-[360px] object-contain
+                      transition-transform duration-300 ease-out group-hover:scale-[1.01]"
+                  />
+                </div>
+              </button>
+            </div>
+          </motion.article>
         ))}
       </div>
 
@@ -120,7 +118,7 @@ const Certificates = () => {
             <motion.div
               initial={{ opacity: 0, y: 16, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.98 }}
+              exit={{ opacity: 0, y: 8, scale: 0.98 }}
               transition={{ duration: 0.22 }}
               className="relative w-full max-w-3xl flex flex-col items-center gap-4"
               onClick={(e) => e.stopPropagation()}
