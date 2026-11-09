@@ -1,10 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
 import {
   About,
+  Certificates,
   Contact,
   Experience,
   Hero,
   Navbar,
+  Recommendations,
   Stats,
   Tech,
   Projects,
@@ -13,33 +15,36 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0">
-        <div>
-          <Navbar />
-          <Hero />
-        </div>
+      <div className="relative z-0 bg-paper text-ink">
+        <Navbar />
+        <Hero />
 
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
+        <div className="atmosphere">
           <About />
           <Stats />
         </div>
 
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
+        <div className="bg-paper">
+          <Projects />
+        </div>
+
+        <div className="bg-surface/80 atmosphere">
+          <Experience />
+        </div>
+
+        <div className="bg-paper">
+          <Recommendations />
+        </div>
+
+        <div className="bg-surface/60">
+          <Certificates />
+        </div>
+
+        <div className="bg-night">
           <Tech />
         </div>
 
-        <Projects />
-
-        <div
-          className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
-          <div
-            className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-            <Experience />
-          </div>
-        </div>
-        <div className="relative z-0">
+        <div className="bg-paper atmosphere">
           <Contact />
         </div>
       </div>

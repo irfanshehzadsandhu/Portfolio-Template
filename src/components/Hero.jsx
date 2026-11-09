@@ -1,103 +1,107 @@
-/* eslint-disable react/no-unescaped-entities */
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { irfan, bwmap, worldmap } from "../assets";
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { socials } from '../constants';
+import { snapdebt } from '../assets';
 
 const Hero = () => {
   return (
-    <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
+    <section className="relative w-full min-h-screen flex items-end overflow-hidden">
+      <div className="absolute inset-0">
         <img
-          src={bwmap}
-          alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
+          src={snapdebt}
+          alt="Snapdebt Recovery product interface"
+          className="w-full h-full object-cover object-top scale-105"
         />
+        <div className="absolute inset-0 bg-heroWash" />
+        <div className="absolute inset-0 atmosphere opacity-60" />
       </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={worldmap}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
-        />
-      </div>
-      <section
-        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
-        sm:bg-hero bg-hero-mobile overflow-hidden"
+
+      <div
+        className={`relative z-10 w-full max-w-7xl mx-auto ${styles.paddingX} pb-16 sm:pb-20 pt-36`}
       >
-        <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
-          max-w-7xl mx-auto flex flex-row items-start
-          justify-between gap-3`}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="font-sans text-accentMuted text-[0.8rem] sm:text-[0.9rem] uppercase tracking-[0.2em] mb-4"
         >
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
-            <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
-          </div>
+          Engineering Manager
+        </motion.p>
 
-          <div>
-            <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
-            >
-              Hi, I'm{" "}
-              <span
-                className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase"
-              >
-                Irfan
-              </span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Engineering Manager building high-performing teams and
-              production-ready SaaS, fintech, and AI products.
-            </p>
-          </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"
-          ></div>
-
-          <div></div>
-        </div>
-
-        <div
-          className="absolute xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center"
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.08 }}
+          className={styles.heroBrand}
         >
-          <a href="#about">
-            <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
-            justify-center items-start p-2"
-            >
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
-              />
-            </div>
+          Irfan Shahzad
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: 'easeOut', delay: 0.16 }}
+          className={`${styles.heroSub} mt-5`}
+        >
+          Building high-performing teams and production-ready SaaS, fintech,
+          and AI products.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.28 }}
+          className="mt-9 flex flex-wrap gap-3 sm:gap-4"
+        >
+          <a
+            href="#projects"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-md
+              bg-cream text-ink font-sans font-semibold text-[0.95rem]
+              hover:bg-white transition-colors"
+          >
+            View work
           </a>
-        </div>
+          <a
+            href={socials.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-md
+              border border-cream/40 text-cream font-sans font-semibold text-[0.95rem]
+              hover:border-cream hover:bg-cream/10 transition-colors"
+          >
+            Resume
+          </a>
+          <a
+            href={socials.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-md
+              text-cream/85 font-sans font-medium text-[0.95rem]
+              hover:text-cream transition-colors"
+          >
+            LinkedIn
+          </a>
+        </motion.div>
 
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        <div>
-          <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={irfan}
-            alt="Irfan"
-          />
-        </div>
-      </section>
-    </>
+      </div>
+
+      <motion.a
+        href="#about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex
+          flex-col items-center gap-2 text-cream/60 hover:text-cream transition-colors"
+        aria-label="Scroll to about"
+      >
+        <span className="text-[0.7rem] uppercase tracking-[0.2em]">Scroll</span>
+        <motion.span
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+          className="w-px h-8 bg-cream/50"
+        />
+      </motion.a>
+    </section>
   );
 };
 

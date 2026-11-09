@@ -1,66 +1,38 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  mode: 'jit',
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
-        secondary: '#aaa6c3',
-        tertiary: '#151030',
-        'black-100': '#100d25',
-        'black-200': '#090325',
-        'white-100': '#f3f3f3',
-        flashWhite: '#f4f4f6',
-        platinum: '#e6e6e9',
-        platinumLight: '#f4f4f5',
-        timberWolf: '#d4d4d8',
-        taupe: '#9999a1',
-        silver: '#d6d6d6',
-        dim: '#66666e',
-        battleGray: '#858585',
-        french: '#b5b5ba',
-        night: '#141414',
-        jet: '#292929',
-        jetLight: '#333333',
-        jetGray: '#6d6d74',
-        richBlack: '#2e2e2e',
-        eerieBlack: '#1f1f1f',
-        onyx: '#5b5b5b',
+        paper: '#F3F1EC',
+        surface: '#EAE7E0',
+        ink: '#1A1C1B',
+        muted: '#5C615E',
+        soft: '#8A8F8B',
+        line: '#D4D0C8',
+        accent: '#0F5C5C',
+        accentSoft: '#147272',
+        accentMuted: '#C5DADA',
+        night: '#141816',
+        cream: '#FAF8F4',
+      },
+      fontFamily: {
+        display: ['Newsreader', 'Georgia', 'serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        card: '0px 35px 120px -15px #1f1f1f',
-        cardLight: '0px 19px 38px #eaeaec, 0px 15px 12px #eaeaec',
+        soft: '0 12px 40px rgba(26, 28, 27, 0.08)',
+        lift: '0 20px 50px rgba(26, 28, 27, 0.12)',
       },
       screens: {
         xs: '450px',
-        sm: '640px',
-        md: '768px',
         xmd: '900px',
-        lg: '1025px',
-        xl: '1280px',
-        '2xl': '1536px',
-        '3xl': '1800px',
       },
       backgroundImage: {
-        about:
-          'linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)',
-        experience:
-          "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
-        experienceLight:
-          'linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)',
-        hero: 'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
-        'hero-mobile':
-          'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
-        tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/src/assets/backgrounds/nairobi.png')",
-      },
-      fontFamily: {
-        arenq: ['Arenq'],
-        beckman: ['Beckman'],
-        mova: ['Mova'],
-        overcameBold: ['Overcame Bold'],
-        overcameOutline: ['Overcame Outline'],
-        poppins: ['Poppins', 'sans-serif'],
+        grain:
+          'radial-gradient(ellipse at 20% 0%, rgba(15, 92, 92, 0.08), transparent 50%), radial-gradient(ellipse at 90% 20%, rgba(26, 28, 27, 0.06), transparent 45%)',
+        heroWash:
+          'linear-gradient(180deg, rgba(20, 24, 22, 0.55) 0%, rgba(20, 24, 22, 0.72) 45%, rgba(20, 24, 22, 0.92) 100%)',
       },
     },
   },

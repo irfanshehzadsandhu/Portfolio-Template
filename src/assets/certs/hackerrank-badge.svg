@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+  <rect width="160" height="160" rx="20" fill="#0F5C5C"/>
+  <path d="M48 40h18v32l28-32h20L82 78l34 42H96L70 88v32H48V40z" fill="#FAF8F4"/>
+  <text x="80" y="142" text-anchor="middle" fill="#C5DADA" font-family="system-ui,sans-serif" font-size="11" font-weight="600">HackerRank</text>
+</svg>

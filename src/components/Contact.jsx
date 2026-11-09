@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { useForm, ValidationError } from "@formspree/react";
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { send, sendHover } from "../assets";
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useForm, ValidationError } from '@formspree/react';
+import { styles } from '../styles';
+import { SectionWrapper } from '../hoc';
+import { slideIn } from '../utils/motion';
+import { socials } from '../constants';
 
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID;
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [showThankYou, setShowThankYou] = useState(false);
   const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
 
@@ -22,156 +22,171 @@ const Contact = () => {
   useEffect(() => {
     if (state.succeeded) {
       setShowThankYou(true);
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: '', email: '', message: '' });
     }
   }, [state.succeeded]);
 
   return (
     <>
       {showThankYou && (
-        <div className="z-50 fixed inset-0 bg-black flex justify-center items-center bg-opacity-20 backdrop-blur-sm">
-          <div className="relative p-4 w-full max-w-2xl max-h-full">
-            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Thank you.
+        <div className="z-50 fixed inset-0 bg-ink/40 flex justify-center items-center backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-md bg-cream rounded-2xl border border-line shadow-lift p-6 sm:p-8">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="font-display text-ink text-[1.5rem] font-semibold">
+                  Thank you
                 </h3>
-                <button
-                  type="button"
-                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                  onClick={() => setShowThankYou(false)}
-                >
-                  <svg
-                    className="w-3 h-3"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 14"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                    />
-                  </svg>
-                  <span className="sr-only">Close modal</span>
-                </button>
-              </div>
-              <div className="p-4 md:p-5 space-y-4">
-                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  I will get back to you as soon as possible.
+                <p className="mt-2 text-muted text-[0.95rem] leading-relaxed">
+                  I&apos;ll get back to you as soon as possible.
                 </p>
               </div>
+              <button
+                type="button"
+                className="text-muted hover:text-ink text-xl leading-none"
+                onClick={() => setShowThankYou(false)}
+                aria-label="Close"
+              >
+                ×
+              </button>
             </div>
           </div>
         </div>
       )}
 
-      <div
-        className="-mt-[8rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden"
-      >
+      <div className="xl:flex-row flex-col flex gap-10 overflow-hidden">
         <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-jet p-8 rounded-2xl"
+          variants={slideIn('left', 'tween', 0.15, 0.55)}
+          className="flex-[0.75] bg-night rounded-2xl p-7 sm:p-9"
         >
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
+          <p className="font-sans text-accentMuted text-[0.8rem] uppercase tracking-[0.18em] font-semibold">
+            Get in touch
+          </p>
+          <h3 className={`${styles.sectionHeadInverse} mt-3`}>Contact</h3>
 
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-10 flex flex-col gap-6 font-poppins"
+            className="mt-8 flex flex-col gap-5 font-sans"
           >
-            <label className="flex flex-col">
-              <span className="text-timberWolf font-medium mb-4">
-                Your Name
+            <label className="flex flex-col gap-2">
+              <span className="text-cream/80 text-[0.9rem] font-medium">
+                Your name
               </span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your name?"
-                className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+                placeholder="Name"
+                className="bg-ink/40 border border-cream/10 py-3.5 px-4
+                  placeholder:text-soft text-cream rounded-lg outline-none
+                  focus:border-accentMuted transition-colors"
                 required
               />
-              <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-400 text-sm mt-1" />
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+                className="text-red-300 text-sm"
+              />
             </label>
-            <label className="flex flex-col">
-              <span className="text-timberWolf font-medium mb-4">
-                Your Email
+
+            <label className="flex flex-col gap-2">
+              <span className="text-cream/80 text-[0.9rem] font-medium">
+                Your email
               </span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your email?"
-                className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+                placeholder="Email"
+                className="bg-ink/40 border border-cream/10 py-3.5 px-4
+                  placeholder:text-soft text-cream rounded-lg outline-none
+                  focus:border-accentMuted transition-colors"
                 required
               />
-              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 text-sm mt-1" />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+                className="text-red-300 text-sm"
+              />
             </label>
-            <label className="flex flex-col">
-              <span className="text-timberWolf font-medium mb-4">
-                Your Message
+
+            <label className="flex flex-col gap-2">
+              <span className="text-cream/80 text-[0.9rem] font-medium">
+                Message
               </span>
               <textarea
-                rows="7"
+                rows="6"
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What's your message?"
-                className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium resize-none"
+                placeholder="How can I help?"
+                className="bg-ink/40 border border-cream/10 py-3.5 px-4
+                  placeholder:text-soft text-cream rounded-lg outline-none
+                  focus:border-accentMuted transition-colors resize-none"
                 required
               />
-              <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-sm mt-1" />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+                className="text-red-300 text-sm"
+              />
             </label>
 
             <button
               type="submit"
               disabled={state.submitting}
-              className="live-demo flex justify-center sm:gap-4 
-            gap-3 sm:text-[20px] text-[16px] text-timberWolf 
-            font-bold font-beckman items-center py-5
-            whitespace-nowrap sm:w-[130px] sm:h-[50px] 
-            w-[100px] h-[45px] rounded-[10px] bg-night 
-            hover:bg-battleGray hover:text-eerieBlack 
-            transition duration-[0.2s] ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
-              onMouseOver={() => {
-                const btn = document.querySelector(".contact-btn");
-                if (btn) btn.setAttribute("src", sendHover);
-              }}
-              onMouseOut={() => {
-                const btn = document.querySelector(".contact-btn");
-                if (btn) btn.setAttribute("src", send);
-              }}
+              className="mt-2 inline-flex w-fit items-center justify-center px-7 py-3.5
+                rounded-md bg-accent text-cream font-semibold text-[0.95rem]
+                hover:bg-accentSoft transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {state.submitting ? "Sending" : "Send"}
-              <img
-                src={send}
-                alt="send"
-                className="contact-btn sm:w-[26px] sm:h-[26px] 
-              w-[23px] h-[23px] object-contain"
-              />
+              {state.submitting ? 'Sending…' : 'Send message'}
             </button>
           </form>
+        </motion.div>
+
+        <motion.div
+          variants={slideIn('right', 'tween', 0.2, 0.55)}
+          className="flex-1 flex flex-col justify-end gap-6 pb-2"
+        >
+          <p className={`${styles.body} max-w-md`}>
+            Open to engineering leadership roles, advisory conversations, and
+            product collaborations in SaaS, fintech, and AI.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans font-semibold text-accent hover:text-accentSoft"
+            >
+              LinkedIn
+            </a>
+            <a
+              href={socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans font-semibold text-accent hover:text-accentSoft"
+            >
+              GitHub
+            </a>
+            <a
+              href={socials.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans font-semibold text-accent hover:text-accentSoft"
+            >
+              Resume
+            </a>
+          </div>
         </motion.div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, 'contact');

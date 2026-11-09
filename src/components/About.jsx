@@ -1,60 +1,47 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { services } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-import { SectionWrapper } from "../hoc";
-
-const ServiceCard = ({ index, title, icon }) => {
-  return (
-    <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  );
-};
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { capabilities } from '../constants';
+import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 
 const About = () => {
   return (
-    <div className="-mt-[6rem]">
+    <div>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionEyebrow}>Introduction</p>
+        <h2 className={`${styles.sectionHead} mt-3`}>Overview</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
+        variants={fadeIn('', '', 0.1, 0.55)}
+        className={`${styles.body} mt-6 max-w-3xl`}
       >
-        Engineering Manager and Full Stack Developer with 10+ years leading teams
-        and shipping scalable SaaS, fintech, and enterprise products. I combine
-        hands-on strength in Next.js, React, TypeScript, Node.js, microservices,
-        AWS, and CI/CD with practical AI delivery — RAG pipelines, vector
-        retrieval, and Hugging Face LLM workflows. I hire, mentor, and
-        operationalize engineering so delivery stays fast and quality stays high.
+        Engineering Manager and full-stack developer with 10+ years leading
+        teams and shipping scalable SaaS, fintech, and enterprise products. I
+        combine hands-on strength in Next.js, React, TypeScript, Node.js,
+        microservices, AWS, and CI/CD with practical AI delivery — RAG
+        pipelines, vector retrieval, and Hugging Face LLM workflows. I hire,
+        mentor, and operationalize engineering so delivery stays fast and
+        quality stays high.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 border-t border-line pt-10">
+        {capabilities.map((item, index) => (
+          <motion.div
+            key={item.title}
+            variants={fadeIn('up', 'tween', index * 0.1, 0.45)}
+          >
+            <p className="font-display text-[1.35rem] text-ink font-semibold leading-snug">
+              {item.title}
+            </p>
+            <p className="mt-3 text-muted text-[0.95rem] leading-relaxed">
+              {item.detail}
+            </p>
+          </motion.div>
         ))}
       </div>
     </div>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, 'about');
