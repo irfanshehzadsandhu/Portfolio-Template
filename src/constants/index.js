@@ -9,11 +9,6 @@ import {
   intagleo,
   dementianc,
   cortex,
-  certProblemSolving,
-  certJavascript,
-  certNodejs,
-  certSql,
-  certReact,
 } from '../assets';
 import lazaros from '../assets/recommenders/lazaros.jpeg';
 import michael from '../assets/recommenders/michael.jpeg';
@@ -21,6 +16,8 @@ import massood from '../assets/recommenders/massood.jpeg';
 import hassib from '../assets/recommenders/hassib.jpeg';
 import deshon from '../assets/recommenders/deshon.jpeg';
 import joe from '../assets/recommenders/joe.jpeg';
+import frontend from '../assets/certs/frontend.png';
+import testgrollia from '../assets/certs/testgrollia.png';
 
 export const socials = {
   linkedin: 'https://www.linkedin.com/in/irfanshehzadsandhu/',
@@ -308,49 +305,26 @@ I believe in him and I know that he has a great passion for what he is doing.`,
 ];
 
 /*
-  Replace credentialUrl with your public HackerRank certificate verify links.
-  Swap SVG placeholders for official badge images if you prefer.
+  Certificate images (not links):
+  1. Save certificate screenshots/PNGs in src/assets/certs/
+     e.g. problem-solving.png, javascript.png
+  2. Import them at the top of this file (or via ../assets)
+  3. Set image: yourImport — the gallery shows the image; click to enlarge
 */
 const certificates = [
   {
     id: 'cert-1',
-    title: 'Problem Solving (Intermediate)',
+    title: 'Frontend Developer (React)',
     issuer: 'HackerRank',
-    issued: 'Verified credential',
-    credentialUrl: 'https://www.hackerrank.com/certificates',
-    image: certProblemSolving,
+    issued: 'Certificate',
+    image: frontend,
   },
   {
     id: 'cert-2',
-    title: 'JavaScript',
-    issuer: 'HackerRank',
-    issued: 'Verified credential',
-    credentialUrl: 'https://www.hackerrank.com/certificates',
-    image: certJavascript,
-  },
-  {
-    id: 'cert-3',
-    title: 'Node.js',
-    issuer: 'HackerRank',
-    issued: 'Verified credential',
-    credentialUrl: 'https://www.hackerrank.com/certificates',
-    image: certNodejs,
-  },
-  {
-    id: 'cert-4',
-    title: 'SQL (Advanced)',
-    issuer: 'HackerRank',
-    issued: 'Verified credential',
-    credentialUrl: 'https://www.hackerrank.com/certificates',
-    image: certSql,
-  },
-  {
-    id: 'cert-5',
-    title: 'React',
-    issuer: 'HackerRank',
-    issued: 'Verified credential',
-    credentialUrl: 'https://www.hackerrank.com/certificates',
-    image: certReact,
+    title: 'Software Engineering',
+    issuer: 'TestGrollia',
+    issued: 'Certificate',
+    image: testgrollia,
   },
 ];
 
